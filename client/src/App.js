@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Form from './components/productForm.jsx';
+import Cards from "./components/cards"
+import { Route, Switch } from "react-router-dom";
+import { getProduct } from "./redux/Actions/productAction";
 
 function App() {
+  const dispath = useDispatch()
+  const products = useSelector(state => state.products.products)
+  useEffect(() => {
+    dispath(getProduct())
+},[dispath]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // <ProductForm />
+    <div>
+    <Route exact path="/" render={() => <Form />} />
+    <Route  path="/products" render={() => <Cards products={products}/>} />
+</div>
+
+  )
 }
 
 export default App;

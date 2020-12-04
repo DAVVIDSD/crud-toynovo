@@ -1,0 +1,62 @@
+.body {
+  overflow-y:hidden;
+}
+body {
+  background: url(https://static.vecteezy.com/system/resources/previews/000/123/334/non_2x/free-toys-vector.jpg);
+  background-size: 24.6rem;
+  background-attachment: fixed;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 480px;
+  margin: auto;
+  margin-top: 80px;
+  padding-top: 20px;
+  text-align: center;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.3);
+  background-color: #ededed;
+  h1 {
+    color: #fe7c7a;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-self: center;
+
+  .input {
+    margin-top: 10px;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #387aff;
+  }
+  .textarea {
+    margin-top: 10px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+  }
+ .button-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .btn {
+    width: 37%;
+    height: 50px;
+    margin-top: 10px;
+    align-self: center;
+    border-radius: 10px;
+    background-color: #4f39e6;
+    color: #00ff8c;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border: #4f39e6;
+  }
+}
+
